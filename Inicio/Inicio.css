@@ -1,0 +1,91 @@
+body{
+    background-color: burlywood;
+
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+.BANNER{
+    
+    
+    font-size: 35px;
+    
+    display: flex;
+     
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 70px;
+    width: 100%;
+   
+    color: cadetblue;
+    margin-bottom: 30px;
+    
+}
+
+.BANNER>#logo >img{
+    display: flex;
+    max-width: 63px;
+    max-height: 50px;
+    border-radius: 30px;
+}
+
+.BANNER>#slogan{
+    display: center;
+    
+    
+}
+
+.BANNER>#buscador{
+    right:0;
+    font-size: 36px;
+    size: 37px;
+    
+
+}
+
+#labelbuscar{
+    font-size: large;
+    margin:0;
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    position:fixed;
+    bottom: 0;
+    width: 99%;
+    height: 40px;
+    color: white;
+    margin-left: 0%;
+}
+
+.carrusel{
+    display:flex;
+    max-width: 100%;
+    
+}
+
+.carrusel>a{
+    margin: 15px;
+}
+
+
+#rutas{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#rutas>a{
+    margin: 10px;
+}
+#SUGERENCIARUTAS{
+    text-align: center;
+    color:cornflowerblue;
+}
+
+#SUGERENCIARUTAS>img{
+    border-radius: 50%;
+}
+
+
