@@ -10,19 +10,20 @@ body{
     font-size: 35px;
     
     display: flex;
-     
+    position:fixed;
+    top:0;
     justify-content: space-between;
     align-items: center;
     background-color: black;
     height: 70px;
-    width: 100%;
+    width: 99%;
    
     color: cadetblue;
     margin-bottom: 30px;
     
 }
 
-.BANNER>#logo >img{
+#logo >img{
     display: flex;
     max-width: 63px;
     max-height: 50px;
@@ -31,17 +32,109 @@ body{
 
 .BANNER>#slogan{
     display: center;
-    
+}
+
+#slogan>a{
+    color:aquamarine;
+    text-decoration: none;
+}
+
+#buscarProv{
+    background-color: black;
+    color: cadetblue;
+    font-family: 'Akaya Telivigala';
+    border-radius: 30%;
+}
+
+#buscarProv:hover{
+    border-color: aliceblue;
+}
+
+#buscarProv:hover + #listaProvincias {
+    display:flex;
+}
+
+#listaProvincias:hover{
+    display:flex;
+}
+
+#listaProvincias{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: coral;
+    text-decoration: none;
+    border-radius: 40%;
+   
     
 }
 
-.BANNER>#buscador{
+#listaProvincias>ul{
+    list-style: none;
+    text-decoration: none;
+    color: cadetblue;
+}
+
+
+
+.formulario{
+    display:none;
+    background-color: blanchedalmond;
+    position:sticky;
+    bottom: 1%;
+    left:0;
+    height: 400px;
+    width: 300px;
+    
+
+}
+
+.formulario>#Sugerencia{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: auto;
+}
+
+#BTNcontanos:active .formulario{
+    display:flex;
+}
+
+#textAreaDatos{
+    resize: none;
+    overflow: auto;
+}
+
+#parrafoConImagen{
+    display: flex;
+}
+
+
+#buscador{
     right:0;
     font-size: 36px;
     size: 37px;
     
 
 }
+
+#form{
+    display: block;
+    border: 1px solid cadetblue;
+    bottom: 15px;
+}
+
+.datosPaisaje{
+    margin-top: 100px;
+}
+
+.datosPaisaje>img{
+    height: 280px;
+    width: 200px;
+}
+
+
 
 #labelbuscar{
     font-size: large;
@@ -55,37 +148,79 @@ footer {
     bottom: 0;
     width: 99%;
     height: 40px;
-    color: white;
-    margin-left: 0%;
-}
-
-.carrusel{
-    display:flex;
-    max-width: 100%;
+    color:cadetblue;
+    
+    align-items: center;
     
 }
 
-.carrusel>a{
-    margin: 15px;
+footer>#BTNcontanos{
+    display: flex;
+    background-color: black;
+    border-color:cadetblue;
+    color:aqua;
+    margin-left: 10px;
 }
 
 
+
+
+
+.fotosCarrusel{
+    padding-top: 100px;
+    display:flex;
+    max-width: 100%;
+    overflow-x: hidden;
+    z-index: -1;
+    
+}
+
+.fotosCarrusel>a>img{
+    margin: 15px;
+    height:183px;
+    width:283px;
+    border-radius: 50%;
+}
+
+.BTNizq{
+    height: 100%;
+    width: 10%;
+}
 #rutas{
+    
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    
+    column-count: 3;
+    overflow: hidden;
+    margin-bottom: 100px;
+    width: 100%;
+    
 }
 
 #rutas>a{
     margin: 10px;
+
 }
+
 #SUGERENCIARUTAS{
+    background-color:rgb(119, 77, 0);
     text-align: center;
+    font-size: 30px;
     color:cornflowerblue;
+    align-items: center;
+    
 }
 
 #SUGERENCIARUTAS>img{
     border-radius: 50%;
+    
+    
+}
+
+#rutas>a>img{
+    margin: 15px;
+    height:183px;
+    width:283px;
 }
 
 

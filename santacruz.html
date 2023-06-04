@@ -1,16 +1,90 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="Inicio.css">
-        <meta charset="UTF-8">
-    </head>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./Inicio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header >
+        <div class="BANNER">
+        
+            <div id="logo"><img src="./IMAGENES/LOGO.png" class="logo"></div>
+                <p id ="slogan"><a href="index.html">EXPLORA ARGENTINA</a></p>
+                
+                    
+                    <div id="buscador">
+                        <button id="buscarProv"><p>BUSCAR PROVINCIA</p></button>
+                            <div id="listaProvincias">
+                                <ul>
+                                    <li><a href="santacruz.html">Santa Cruz</a></li>
+                                    <li><a href="misiones.html">Misiones</a></li>
+                                    <li><a href="sanjuan.html">San Juan</a></li>
+                                    <li><a href="tierradelfuego.html">Tierra del Fuego</a></li>
+                                    <li><a href="jujuy.html">Jujuy</a></li>
+                                </ul>
+                            </div>
+                            
+                       
+        
+                    </div>
+                
+                
+            </div>
+        </div>
+    </header>
 
-    <body>
-        <div id="BANNER">
+    <div class="datosPaisaje">
+        <div>
+            <h1>SANTA CRUZ</h1>
+            <h1>GLACIAR PERITO MORENO</h1> <br>
+            <p id="parrafoConImagen">
+                
+                <img src="IMAGENES/Perito-Moreno.jpg" alt="">
+                    Este glaciar se origina en el campo de hielo Patagónico Sur teniendo parte de su origen en la región de Magallanes y de la Antártica Chilena de Chile, integrando el Parque nacional Bernardo O'Higgins con el límite demarcado con el Acuerdo de 1998.3​2​ En su descenso, alcanza el brazo Sur del lago Argentino, con un frente de 5 km de longitud, aflorando sobre el agua con una altura de unos 60 m.
 
-        </div>    
+                    Gracias a su constante avance, forma una represa con las aguas del brazo Rico de dicho lago, lo cual genera un desnivel con respecto al resto del lago de hasta 30 m. Por la presión de esta masa líquida se producen filtraciones en el hielo que crean un túnel con una bóveda de más de 50 m de altura. El derrumbe de esta bóveda constituye un inusual espectáculo natural y es uno de los mayores atractivos del parque.
+
+                    El nombre del glaciar hace honor a Francisco Moreno, director del museo de la Sociedad Científica Argentina y activo explorador de la zona austral de ese país.
+            </p>
+            <img src="IMAGENES/peritoMoreno.jpg" alt="">
+        </div>
+
+    </div>
+    
+    
+    
+
+    
+    <div class="formulario">
+
+        <form action="">
+            <label for="nombreProvincia">Provincia</label>
+            <input type="text">
+
+            <label for="NombrePaisaje">Lugar</label>
+            <input type="text">
 
 
+            <input type="submit">
+        </form>
 
-    </body>
+    </div>
+   
+    
+    
+    <footer>
+      <p>¿CUAL ES TU PAISAJE ARGENTINO FAVORITO?</p>
+         <button id="BTNcontanos">CONTANOS!</button>
+
+           
+    </footer>
+     
+    
+
+</body>
+
 </html>
