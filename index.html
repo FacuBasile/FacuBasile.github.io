@@ -68,15 +68,15 @@
     </div>
     
     <div id="formulario">
-        <form id="Sugerencia" action="">
+        <form id="Sugerencia">
             <label for="nombreProvincia">Provincia</label>
-            <input type="text" id="provincianombre">
+            <input type="text" id="provinciaNombre">
 
             <label for="NombrePaisaje">Lugar</label>
-            <input type="text" id="paisajenombre">
+            <input type="text" id="paisajeNombre">
 
             <label for="NombrePersona">Su nombre:</label>
-            <input type="text" id="nombrepers">
+            <input type="text" id="nombrePers">
 
             <label for="Email">Email</label>
             <input type="text" id="Email">
@@ -84,9 +84,16 @@
             <label for="">Datos</label>
             <textarea name="datos" id="textAreaDatos" cols="30" rows="10"></textarea>
 
-            <button id="BTNsubmit" onclick="verificacion()">ENVIAR</button>
+            <button type="submit">ENVIAR</button>
 
-            <label for="confirmacion" id="confirmacion"></label>
+            <div id="ERRORES">
+                
+            </div>
+
+            <div id="MENSAJE">
+
+            </div>
+            
         </form>
     </div>
    
@@ -94,9 +101,7 @@
     
     <footer>
       <p>¿CUAL ES TU PAISAJE ARGENTINO FAVORITO?</p>
-         <button id="BTNcontanos" onclick="mostrarform();">CONTANOS!</button>
-
-           
+        <button id="BTNcontanos" onclick="mostrarform();">CONTANOS!</button>
     </footer>
     
      

@@ -25,14 +25,19 @@ function mostrarform(){
    }
 }
 
-const botonformu = document.querySelector(".BTNsubmit");
+const botonformu = document.getElementById("BTNsubmit");
+const formu = document.getElementById("Sugerencia");
 
-botonformu.addEventListener("click", () =>{
-    const form =  document.getElementById("formulario").style.display;
+formu.addEventListener("submit", function(event){
+    event.preventDeault();
+
     
-    form = "flex";
+    if(verificacion()){
+
+    }
 
 })
+
 
 
 
@@ -41,19 +46,27 @@ botonformu.addEventListener("click", () =>{
 function verificacion(){
     let expresion = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
     var email = document.getElementById("Email").value;
-    const cartelVerificacion = document.getElementById("confirmacion");
-    let nombre = document.getElementById("")
+    const cartelErrores = document.getElementById("ERRORES");
+    const cartelMensaje = document.getElementById("MENSAJE");
+    let nombre = document.getElementById("nombrePers");
 
     let verifico = true;
+
     let mensaje = " GRACIAS POR TU SUGERENCIA! ";
 
+    /* VERIFICACION EMAIL */
+
     if(expresion.test(email)){
-        cartelVerificacion.innerHTML(concat(nombre,mensaje));
+        cartelErrores.innerHTML = "";
     }else{
         email.style.border = red;
         verifico = false;
     }
 
+
+
+
+    return verifico;
 }
 
 
