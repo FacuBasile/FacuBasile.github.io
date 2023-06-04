@@ -7,9 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
-    <script src="Inicio.js"></script>
+    
 </head>
 <body>
+    
     <header >
         <div class="BANNER">
         
@@ -39,9 +40,9 @@
     </header>
 
     <div class="carrusel">
-        <button class="BTNizq"></button>
+        <img class="control ant" src="IMAGENES/flecha.png" alt="">
         <div class="fotosCarrusel">
-
+            
             <a href="tierradelfuego.html"><img src="IMAGENES/faroFindelmundo.jpg"></a>
             <a href="sanjuan.html"><img src="IMAGENES/valleluna1.jpg"></a>
             <a href="santacruz.html"><img src="IMAGENES/peritoMoreno.jpg" alt=""></a>
@@ -49,7 +50,7 @@
             <a href="jujuy.html"><img src="IMAGENES/7colores.jpg" alt=""></a>
 
         </div>
-       <button class="BTNder"></button> 
+       <img class="controlDer sig" src="IMAGENES/flecha.png" alt="">
        
     </div>
     <p id="SUGERENCIARUTAS"><img src="IMAGENES/flechaHaciaAbajo.png" height="35px" width="35px">ALGUNAS RUTAS Y SUS VISTAS<img src="IMAGENES/flechaHaciaAbajo.png" height="35px" width="35px"></p>
@@ -66,14 +67,16 @@
         
     </div>
     
-    <div class="formulario">
-
+    <div id="formulario">
         <form id="Sugerencia" action="">
             <label for="nombreProvincia">Provincia</label>
-            <input type="text">
+            <input type="text" id="provincianombre">
 
             <label for="NombrePaisaje">Lugar</label>
-            <input type="text">
+            <input type="text" id="paisajenombre">
+
+            <label for="NombrePersona">Su nombre:</label>
+            <input type="text" id="nombrepers">
 
             <label for="Email">Email</label>
             <input type="text" id="Email">
@@ -81,25 +84,25 @@
             <label for="">Datos</label>
             <textarea name="datos" id="textAreaDatos" cols="30" rows="10"></textarea>
 
-            <input type="submit">
+            <button id="BTNsubmit" onclick="verificacion()">ENVIAR</button>
 
             <label for="confirmacion" id="confirmacion"></label>
         </form>
-
     </div>
    
     
     
     <footer>
       <p>¿CUAL ES TU PAISAJE ARGENTINO FAVORITO?</p>
-         <button id="BTNcontanos">CONTANOS!</button>
+         <button id="BTNcontanos" onclick="mostrarform();">CONTANOS!</button>
 
            
     </footer>
     
      
     
-
+    <script src="Inicio.js"></script>
+    
 </body>
 
 </html>

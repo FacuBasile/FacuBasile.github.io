@@ -1,35 +1,60 @@
-const carrusel = document.getElementsByClassName("fotosCarrusel");
+/* BOTONES FOTOS CARRUSEL*/
+
+const BTNder = document.querySelector(".sig");
+const BTNizq = document.querySelector(".ant");
+const fotoscarru = document.querySelector(".fotosCarrusel");
+
+BTNder.addEventListener("click", () =>{
+    fotoscarru.scrollLeft +=300;
+})
+
+BTNizq.addEventListener("click", () =>{
+    fotoscarru.scrollLeft -=300;
+})
+
+/* FIN JS BOTONES FOTOS CARRUSEL*/
+
+
+/*MOSTRAR FORMULARIO CON BOTON DE FOOTER*/
+function mostrarform(){
+    const form =  document.getElementById("formulario").style.display;
+   if( form==="flex"){
+    document.getElementById("formulario").style.display="none";
+   }else{
+    document.getElementById("formulario").style.display="flex";
+   }
+}
+
+const botonformu = document.querySelector(".BTNsubmit");
+
+botonformu.addEventListener("click", () =>{
+    const form =  document.getElementById("formulario").style.display;
+    
+    form = "flex";
+
+})
 
 
 
 
-let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
-let intervalo = null;
-let step = 1;
-const start = () => {
-    intervalo = setInterval(function () {
-        carrusel.scrollLeft = carrusel.scrollLeft + step;
-        if (carrusel.scrollLeft >= maxScrollLeft - 1) {
-            step = -1;
-        } else if (carrusel.scrollLeft <= 1) {
-            step = 1;
-        }
-    }, 10);
-};
+/* VERIFICACION FORMULARIO */
+function verificacion(){
+    let expresion = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+    var email = document.getElementById("Email").value;
+    const cartelVerificacion = document.getElementById("confirmacion");
+    let nombre = document.getElementById("")
 
-const stop = () => {
-    clearInterval(intervalo);
-};
+    let verifico = true;
+    let mensaje = " GRACIAS POR TU SUGERENCIA! ";
 
-carrusel.addEventListener("mouseover", () => {
-    stop();
-});
+    if(expresion.test(email)){
+        cartelVerificacion.innerHTML(concat(nombre,mensaje));
+    }else{
+        email.style.border = red;
+        verifico = false;
+    }
 
-carrusel.addEventListener("mouseout", () => {
-    start();
-});
+}
 
-start();
 
-const BTNbuscarProv = document.getElementById("buscarProv");
 

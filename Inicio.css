@@ -10,16 +10,16 @@ body{
     font-size: 35px;
     
     display: flex;
-    position:fixed;
+   
     top:0;
     justify-content: space-between;
     align-items: center;
     background-color: black;
     height: 70px;
-    width: 99%;
+    
    
     color: cadetblue;
-    margin-bottom: 30px;
+   
     
 }
 
@@ -76,10 +76,16 @@ body{
     color: cadetblue;
 }
 
+#listaProvincias>ul>li>a{
+    
+    text-decoration: none;
+    color: cadetblue;
+}
 
 
-.formulario{
-    display:none;
+
+#formulario{
+    display:flex;
     background-color: blanchedalmond;
     position:sticky;
     bottom: 1%;
@@ -90,16 +96,43 @@ body{
 
 }
 
-.formulario>#Sugerencia{
+#formulario>#Sugerencia{
     display:flex;
     flex-direction: column;
     width: 100%;
     overflow-y: auto;
 }
 
-#BTNcontanos:active .formulario{
-    display:flex;
+
+
+
+
+.carrusel>.control{
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 55%;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    padding: 10px;
 }
+
+.carrusel>.controlDer{
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 55%;
+    background-color:black;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    padding: 10px;
+    right: 0;
+    rotate: 198grad;
+}
+
 
 #textAreaDatos{
     resize: none;
@@ -170,8 +203,9 @@ footer>#BTNcontanos{
     padding-top: 100px;
     display:flex;
     max-width: 100%;
+   
     overflow-x: hidden;
-    z-index: -1;
+    scroll-behavior: smooth;
     
 }
 
@@ -180,6 +214,7 @@ footer>#BTNcontanos{
     height:183px;
     width:283px;
     border-radius: 50%;
+    margin-left: 150px;
 }
 
 .BTNizq{

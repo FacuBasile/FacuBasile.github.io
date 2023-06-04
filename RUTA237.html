@@ -54,29 +54,38 @@
     
 
     
-    <div class="formulario">
-
-        <form action="">
+    <div id="formulario">
+        <form id="Sugerencia" action="">
             <label for="nombreProvincia">Provincia</label>
             <input type="text">
 
             <label for="NombrePaisaje">Lugar</label>
             <input type="text">
 
+            <label for="Email">Email</label>
+            <input type="text" id="Email">
+
+            <label for="">Datos</label>
+            <textarea name="datos" id="textAreaDatos" cols="30" rows="10"></textarea>
 
             <input type="submit">
-        </form>
 
+            <label for="confirmacion" id="confirmacion"></label>
+        </form>
     </div>
    
     
     
     <footer>
       <p>¿CUAL ES TU PAISAJE ARGENTINO FAVORITO?</p>
-         <button id="BTNcontanos">CONTANOS!</button>
+         <button id="BTNcontanos" onclick="mostrarform();">CONTANOS!</button>
 
            
     </footer>
+    
+     
+    
+    <script src="Inicio.js"></script>
      
     
 
