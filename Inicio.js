@@ -30,13 +30,13 @@ const formu = document.getElementById("Sugerencia");
 
 formu.addEventListener("submit", function(event){
     event.preventDeault();
-
-    
-    if(verificacion()){
-
-    }
-
 })
+
+botonformu.addEventListener("click", function(event){
+    event.preventDefault();
+})
+
+
 
 
 
@@ -44,30 +44,36 @@ formu.addEventListener("submit", function(event){
 
 /* VERIFICACION FORMULARIO */
 function verificacion(){
+
     let expresion = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-    var email = document.getElementById("Email").value;
+    var email = document.getElementById("Email");
+
     const cartelErrores = document.getElementById("ERRORES");
     const cartelMensaje = document.getElementById("MENSAJE");
-    let nombre = document.getElementById("nombrePers");
-
+    let nombre = document.getElementById("nombrePers").value;
+    let provincia = document.getElementById("provinciaNombre");
+    let paisaje = document.getElementById("paisajeNombre");
     let verifico = true;
 
     let mensaje = " GRACIAS POR TU SUGERENCIA! ";
 
     /* VERIFICACION EMAIL */
-
-    if(expresion.test(email)){
+    
+    if(expresion.test(email.value)){
         cartelErrores.innerHTML = "";
+        email.style.border="";
     }else{
-        email.style.border = red;
+        email.style.border="1px solid red";
+        cartelErrores.innerHTML = "FALTA UN EMAIL";
+        email.focus;
         verifico = false;
     }
 
+    // VERIFICAR PAISAJE
 
+    if(paisaje===""){
+        cartelErrores.innerHTML="Falta el paisaje!";
+    }
 
-
-    return verifico;
+    
 }
-
-
-
