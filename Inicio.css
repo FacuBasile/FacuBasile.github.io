@@ -85,7 +85,7 @@ body{
 
 
 #formulario{
-    display:flex;
+    display:none;
     background-color: blanchedalmond;
     position:sticky;
     bottom: 1%;
