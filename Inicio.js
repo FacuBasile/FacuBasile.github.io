@@ -24,6 +24,7 @@ function mostrarform(){
     document.getElementById("formulario").style.display="flex";
    }
 }
+    for
 
 const botonformu = document.getElementById("BTNsubmit");
 const formu = document.getElementById("Sugerencia");
