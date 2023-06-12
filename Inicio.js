@@ -1,3 +1,5 @@
+cambiarFotoCarruselArray();
+
 /* BOTONES FOTOS CARRUSEL*/
 
 const BTNder = document.querySelector(".sig");
@@ -13,8 +15,6 @@ BTNizq.addEventListener("click", () =>{
 })
 
 /* FIN JS BOTONES FOTOS CARRUSEL*/
-
-
 /*MOSTRAR FORMULARIO CON BOTON DE FOOTER*/
 function mostrarform(){
     const form =  document.getElementById("formulario").style.display;
@@ -24,28 +24,17 @@ function mostrarform(){
     document.getElementById("formulario").style.display="flex";
    }
 }
-    for
-
 const botonformu = document.getElementById("BTNsubmit");
 const formu = document.getElementById("Sugerencia");
-
 formu.addEventListener("submit", function(event){
     event.preventDeault();
 })
-
 botonformu.addEventListener("click", function(event){
     event.preventDefault();
 })
-
-
-
-
-
-
-
 /* VERIFICACION FORMULARIO */
 function verificacion(){
-
+    
     let expresion = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
     var email = document.getElementById("Email");
 
@@ -58,7 +47,9 @@ function verificacion(){
 
     let mensaje = document.createElement("p");
     mensaje.innerHTML = nombre.value + "  GRACIAS POR SUGERIR " + paisaje.value;
-
+    email.style.border="";
+    paisaje.style.border="";
+    nombre.style.border="";
     /* VERIFICACION EMAIL */
     
     if(expresion.test(email.value)){
@@ -121,5 +112,33 @@ function verificacion(){
         cartelMensaje.innerHTML="";
        cartelMensaje.appendChild(mensaje);
     }
+    
+}
+// CARRUSEL CON ARRAY 
+  
+  
+function cambiarFotoCarruselArray(){
+
+    let  img1 = document.getElementById("foto1");
+    let  img2 = document.getElementById("foto2");
+    let  img3 = document.getElementById("foto3");
+    let  imgvista = document.getElementById("fotoMostrada");
+    
+   
+
+    var arrImg = [img1,img2,img3];
+    
+
+    for(var index = 0 ; index <= arrImg.length ; index++){
+        if(index === arrImg.length){
+         imgvista.src = arrImg[index].src;
+            break;
+        }else{
+         imgvista.src = arrImg[index+1].src;
+            break;
+        }
+    }   
+        
+    
     
 }

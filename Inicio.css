@@ -109,11 +109,12 @@ header{
 
 
 
-.carrusel>.control{
-    position:fixed;
+.fotosCarrusel>.control{
+    position: sticky;
     width: 50px;
     height: 50px;
-    bottom: 55%;
+    left:0;
+    
     background-color: black;
     border-radius: 50%;
     cursor: pointer;
@@ -121,11 +122,13 @@ header{
     padding: 10px;
 }
 
-.carrusel>.controlDer{
-    position:fixed;
+.fotosCarrusel>.controlDer{
+    display:flex;
+    position: sticky;
     width: 50px;
     height: 50px;
-    bottom: 55%;
+    left:0;
+    
     background-color:black;
     border-radius: 50%;
     cursor: pointer;
@@ -202,21 +205,23 @@ footer>#BTNcontanos{
 
 
 .fotosCarrusel{
-    padding-top: 100px;
+    
     display:flex;
     max-width: 100%;
    
     overflow-x: hidden;
     scroll-behavior: smooth;
     
+    
 }
 
 .fotosCarrusel>a>img{
+  
     margin: 15px;
     height:183px;
     width:283px;
     border-radius: 50%;
-    margin-left: 150px;
+    margin-left: 100px;
 }
 
 .BTNizq{
@@ -236,6 +241,7 @@ footer>#BTNcontanos{
 
 #rutas>a{
     margin: 10px;
+    
 
 }
 
@@ -255,9 +261,39 @@ footer>#BTNcontanos{
 }
 
 #rutas>a>img{
-    margin: 15px;
+    padding: 10%;
+    margin: 15%;
     height:183px;
     width:283px;
+    
+}
+
+.carruselArray{
+    display:flex;
+    flex-direction: column;
+}
+
+.carruselArray>img{
+    display:none;
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+    
+}
+
+.carruselArray>#fotoMostrada{
+    display:flex;
+    width: 300px;
+    height: 300px;
+}
+
+.carruselArray>p{
+    color: aliceblue;
+    background-color: grey;
+    opacity: 0.80;
+    width: 300px;
+    height: 30px;
+    position:absolute;
 }
 
 
