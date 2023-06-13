@@ -4,10 +4,10 @@
 
 const BTNder = document.querySelector(".controlDer");
 const BTNizq = document.querySelector(".control");
-const fotoscarru = document.querySelector("fotosCarrusel");
+const fotoscarru = document.querySelector(".fotosCarrusel");
 
 BTNder.addEventListener("click", () =>{
-    fotoscarru.scrollLeft +=300;
+    fotoscarru.scrollLeft+=300;
 })
 
 BTNizq.addEventListener("click", () =>{
@@ -128,7 +128,8 @@ function verificacion(){
 // CARRUSEL CON ARRAY 
   
 const index = 0;  
-function cambiarFotoCarruselArray(){
+
+window.onload = function cambiarFotoCarruselArray(){
 
     let  img1 = document.getElementById("foto1");
     let  img2 = document.getElementById("foto2");
@@ -141,15 +142,15 @@ function cambiarFotoCarruselArray(){
     
 
    
-        if(index === arrImg.length){
-         imgvista.src = arrImg[index];
+    if(index === arrImg.length-1){
+     index = 0;
             
-        }else{
-         imgvista.src = arrImg[index+1];
+    }else{
+     index++;
            
-        }
+    }
       
-        
+    imgvista = arrImg[index];
     
     
 }

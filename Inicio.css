@@ -110,14 +110,16 @@ header{
 
 .carrusel{
     display:flex;
+
 }
 
 .control{
-    display:flex;
-    position: sticky;
+   
+    position: absolute;
     width: 50px;
     height: 50px;
     left:0;
+    z-index: 3;
     
     background-color: black;
     border-radius: 50%;
@@ -211,6 +213,8 @@ footer>#BTNcontanos{
 .fotosCarrusel{
     
     display:flex;
+    position:sticky;
+    left: 0;
     
 
     width: 100%;
@@ -223,11 +227,13 @@ footer>#BTNcontanos{
 
 .fotosCarrusel>a>img{
   
-    margin: 15px;
+    
     height:183px;
     width:283px;
-    border-radius: 50%;
-    margin-left: 100px;
+    border-radius: 15%;
+    margin-right: 100px;
+
+
 }
 
 .BTNizq{
@@ -276,7 +282,7 @@ footer>#BTNcontanos{
 
 .carruselArray{
     display:flex;
-    flex-direction: column;
+    
 }
 
 .carruselArray>img{
