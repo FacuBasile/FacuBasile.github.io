@@ -1,10 +1,10 @@
-cambiarFotoCarruselArray();
+
 
 /* BOTONES FOTOS CARRUSEL*/
 
-const BTNder = document.querySelector(".sig");
-const BTNizq = document.querySelector(".ant");
-const fotoscarru = document.querySelector(".fotosCarrusel");
+const BTNder = document.querySelector(".controlDer");
+const BTNizq = document.querySelector(".control");
+const fotoscarru = document.querySelector("fotosCarrusel");
 
 BTNder.addEventListener("click", () =>{
     fotoscarru.scrollLeft +=300;
@@ -15,6 +15,8 @@ BTNizq.addEventListener("click", () =>{
 })
 
 /* FIN JS BOTONES FOTOS CARRUSEL*/
+
+
 /*MOSTRAR FORMULARIO CON BOTON DE FOOTER*/
 function mostrarform(){
     const form =  document.getElementById("formulario").style.display;
@@ -24,14 +26,23 @@ function mostrarform(){
     document.getElementById("formulario").style.display="flex";
    }
 }
+
+/* EVITAR QUE SE RECARGUE LA PAGINA CON LOS BOTONES DEL FORMULARIO*/
+
+
 const botonformu = document.getElementById("BTNsubmit");
 const formu = document.getElementById("Sugerencia");
+
 formu.addEventListener("submit", function(event){
     event.preventDeault();
 })
+
+
 botonformu.addEventListener("click", function(event){
     event.preventDefault();
 })
+
+
 /* VERIFICACION FORMULARIO */
 function verificacion(){
     
@@ -116,7 +127,7 @@ function verificacion(){
 }
 // CARRUSEL CON ARRAY 
   
-  
+const index = 0;  
 function cambiarFotoCarruselArray(){
 
     let  img1 = document.getElementById("foto1");
@@ -129,15 +140,15 @@ function cambiarFotoCarruselArray(){
     var arrImg = [img1,img2,img3];
     
 
-    for(var index = 0 ; index <= arrImg.length ; index++){
+   
         if(index === arrImg.length){
-         imgvista.src = arrImg[index].src;
-            break;
+         imgvista = arrImg[index];
+            
         }else{
-         imgvista.src = arrImg[index+1].src;
-            break;
+         imgvista = arrImg[index+1];
+           
         }
-    }   
+      
         
     
     

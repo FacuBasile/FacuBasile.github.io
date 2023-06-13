@@ -107,7 +107,9 @@ header{
 
 
 
-
+.carrusel{
+    display:flex;
+}
 
 .control{
     display:flex;
@@ -208,9 +210,11 @@ footer>#BTNcontanos{
 .fotosCarrusel{
     
     display:flex;
-    max-width: 100%;
+    
+
+    width: 100%;
    
-    overflow-x: hidden;
+    overflow-x:hidden;
     scroll-behavior: smooth;
     
     
