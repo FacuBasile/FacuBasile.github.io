@@ -142,10 +142,10 @@ function cambiarFotoCarruselArray(){
 
    
         if(index === arrImg.length){
-         imgvista = arrImg[index];
+         imgvista.src = arrImg[index];
             
         }else{
-         imgvista = arrImg[index+1];
+         imgvista.src = arrImg[index+1];
            
         }
       

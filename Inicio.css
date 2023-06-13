@@ -1,6 +1,7 @@
 body{
     background-color: burlywood;
-
+    display:flex;
+    flex-direction: column;
     font-family: 'Akaya Telivigala', cursive;
 }
 header{
