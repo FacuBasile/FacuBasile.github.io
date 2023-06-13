@@ -130,28 +130,17 @@ function verificacion(){
 let index = 0;  
 
 function cambiarFotoCarruselArray(){
-    let arrImg = [];
+    let imagenes = [];
+                imagenes[0]= document.getElementById("foto1").src;
+                imagenes[1]= document.getElementById("foto2").src;
+                imagenes[2]= document.getElementById("foto3").src;
+                
+                if(index==3){
+                    index=0;
+                }else{
+                    index++;
+                }
+                
+                document.getElementById("fotoMostrada").src = imagenes[index];
 
-    arrImg[0] = "./IMAGENES/cataratas.jpg";
-    arrImg[1] = "./IMAGENES/cataratasglobal.jpg";
-    arrImg[2] = "./IMAGENES/cataratasiguazu.jpg";
-    let imgvista= new Image();
-    
-    
-   let fotovisible = document.getElementById("fotoVISIBLE");
-
-    
-    
-
-   
-    if(index === arrImg.length-1){
-     index = 0;
-     
-    }else{
-     index++;
-     
-    }
-      
-    imgvista.src=arrImg[index];
-    fotovisible.appendChild(imgvista);
 }
