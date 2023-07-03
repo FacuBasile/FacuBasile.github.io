@@ -1,18 +1,22 @@
-/* EVITAR QUE SE RECARGUE LA PAGINA CON LOS BOTONES DEL FORMULARIO*/
+// CARRUSEL CON ARRAY 
+  
+let index = 0;  
 
+function cambiarFotoCarruselArray(){
+    let imagenes = [];
+    imagenes[0]= document.getElementById("foto1").src;   
+    imagenes[1]= document.getElementById("foto2").src;
+    imagenes[2]= document.getElementById("foto3").src;
+                
+    if(index==3){
+      index=0;
+    }else{
+     index++;
+    }
+                
+    document.getElementById("fotoMostrada").src = imagenes[index];
 
-const botonformu = document.getElementById("BTNsubmit");
-const formu = document.getElementById("Sugerencia");
-
-formu.addEventListener("submit", function(event){
-    event.preventDeault();
-})
-
-
-botonformu.addEventListener("click", function(event){
-    event.preventDefault();
-})
-
+}
 
 /* VERIFICACION FORMULARIO */
 function verificacion(){
@@ -96,6 +100,23 @@ function verificacion(){
     }
     
 }
+
+/* EVITAR QUE SE RECARGUE LA PAGINA CON LOS BOTONES DEL FORMULARIO*/
+
+
+const botonformu = document.getElementById("BTNsubmit");
+const formu = document.getElementById("Sugerencia");
+
+formu.addEventListener("submit", function(event){
+    event.preventDeault();
+})
+
+
+botonformu.addEventListener("click", function(event){
+    event.preventDefault();
+})
+
+
 /*MOSTRAR FORMULARIO CON BOTON DE FOOTER*/
 function mostrarform(){
     const form =  document.getElementById("formulario").style.display;
@@ -104,43 +125,4 @@ function mostrarform(){
    }else{
     document.getElementById("formulario").style.display="flex";
    }
-}
-/* BOTONES FOTOS CARRUSEL*/
-
-const BTNder = document.querySelector(".controlDer");
-const BTNizq = document.querySelector(".control");
-const fotoscarru = document.querySelector(".fotosCarrusel");
-
-BTNder.addEventListener("click", () =>{
-    fotoscarru.scrollLeft+=300;
-})
-
-BTNizq.addEventListener("click", () =>{
-    fotoscarru.scrollLeft -=300;
-})
-
-/* FIN JS BOTONES FOTOS CARRUSEL*/
-
-
-
-
-
-// CARRUSEL CON ARRAY 
-  
-let index = 0;  
-
-function cambiarFotoCarruselArray(){
-    let imagenes = [];
-                imagenes[0]= document.getElementById("foto1").src;
-                imagenes[1]= document.getElementById("foto2").src;
-                imagenes[2]= document.getElementById("foto3").src;
-                
-                if(index==3){
-                    index=0;
-                }else{
-                    index++;
-                }
-                
-                document.getElementById("fotoMostrada").src = imagenes[index];
-
 }
